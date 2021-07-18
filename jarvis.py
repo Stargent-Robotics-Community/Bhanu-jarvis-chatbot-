@@ -1,3 +1,4 @@
+from sys import path
 import pyttsx3
 import datetime
 import speech_recognition as sr
@@ -31,6 +32,7 @@ def wishme():
       speak("hello sir good night")
 
 # speak("how can i help you sir")
+# speak("how can i help you sir-edited")
 
 wishme()     
 speak(" how can i help you and sorry for late submission of the reapo")
@@ -69,14 +71,30 @@ try:
        speak("According to wikipedia")
        print(results)
        speak(results)
+
+
     elif 'play music' in query:
        music_dir='D:\\bee'
        songs=os.listdir(music_dir)
        print(songs)
+
+
        os.startfile(os.path.join(music_dir,songs[8]))
     elif 'the time' in query:
        strTime = datetime.datetime.now().strftime("%H:%M:%S")
        speak("sir,time jaaan kaarr kyaa karogee aapkaa timee kharabh hi chal raha hai waise the time is " + strTime)
+
+
+    elif 'open code' in query:
+       path = "C:\\Users\\kishan\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+       os.startfile(path)
+
+
+    elif 'open gta' in query:
+       gtapath =    "C:\Program Files (x86)\ATH TEAM\Grand Theft Auto San Andreas\gta_sa.exe"
+       os.startfile(gtapath)
+       
+
 except:
     print("Sorry I am unable to understand. Can you please repeat.")
 
